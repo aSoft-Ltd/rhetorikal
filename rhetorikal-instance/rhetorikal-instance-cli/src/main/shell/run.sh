@@ -1,0 +1,1 @@
+./testifier-instance/testifier-instance-cli/build/binaries/debug/bin/testifier-instance-cli
