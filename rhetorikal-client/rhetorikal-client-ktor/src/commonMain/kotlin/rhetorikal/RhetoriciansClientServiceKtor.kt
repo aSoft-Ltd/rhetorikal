@@ -19,9 +19,9 @@ class RhetoriciansClientServiceKtor(
     private val scope: CoroutineScope = CoroutineScope(SupervisorJob()),
     private val client: HttpClient = HttpClient { },
 ) : RhetoriciansClientService {
-
+    private val prefix = "/api/v1"
     override fun create(params: RhetoricianParams, photo: ByteArray?) = scope.later {
-        val json = client.post<String>("$endpoint${Routes.Rhetoricians.single}") {
+        val json = client.post<String>("$endpoint$prefix${Routes.Rhetoricians.single}") {
             body = TextContent(
                 text = Json.encodeToString(RhetoricianParams.serializer(), params),
                 contentType = ContentType.Application.Json
@@ -31,7 +31,7 @@ class RhetoriciansClientServiceKtor(
     }
 
     override fun edit(rhetorician: Rhetorician): Later<Rhetorician> = scope.later {
-        val json = client.put<String>("$endpoint${Routes.Rhetoricians.single}") {
+        val json = client.put<String>("$endpoint$prefix${Routes.Rhetoricians.single}") {
             body = TextContent(
                 text = Json.encodeToString(Rhetorician.serializer(), rhetorician),
                 contentType = ContentType.Application.Json
@@ -45,7 +45,7 @@ class RhetoriciansClientServiceKtor(
     }
 
     override fun all(): Later<List<Rhetorician>> = scope.later {
-        val json = client.get<String>("$endpoint${Routes.Rhetoricians.all}")
+        val json = client.get<String>("$endpoint$prefix${Routes.Rhetoricians.all}")
         Result.parse(ListSerializer(Rhetorician.serializer()), json).response()
     }
 }

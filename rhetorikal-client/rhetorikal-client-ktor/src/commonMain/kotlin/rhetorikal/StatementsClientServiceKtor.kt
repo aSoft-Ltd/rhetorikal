@@ -19,8 +19,9 @@ class StatementsClientServiceKtor(
     private val scope: CoroutineScope = CoroutineScope(SupervisorJob()),
     private val client: HttpClient = HttpClient { }
 ) : StatementsClientService {
+    private val prefix = "/api/v1"
     override fun create(params: StatementParams): Later<Statement> = scope.later {
-        val json = client.post<String>("$endpoint${Routes.Statements.single}") {
+        val json = client.post<String>("$endpoint$prefix${Routes.Statements.single}") {
             body = TextContent(
                 text = Json.encodeToString(StatementParams.serializer(), params),
                 contentType = ContentType.Application.Json
@@ -38,7 +39,7 @@ class StatementsClientServiceKtor(
     }
 
     override fun all(): Later<List<Statement>> = scope.later {
-        val json = client.get<String>("$endpoint${Routes.Statements.all}")
+        val json = client.get<String>("$endpoint$prefix${Routes.Statements.all}")
         Result.parse(ListSerializer(Statement.serializer()), json).response()
     }
 }
