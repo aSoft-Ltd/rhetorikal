@@ -22,18 +22,9 @@ class RhetorikalContainer private constructor() : VComponent<RProps, Intent, Sta
         RhetorikalManagerViewModel(service)
     }
 
-    private var listener: Watcher<State>? = null
-
     override fun componentDidMount() {
-        listener = viewModel.ui.watch {
-            setState(UIState(it))
-        }
+        super.componentDidMount()
         post(Intent.LoadWitnesses)
-    }
-
-    override fun componentWillUnmount() {
-        listener?.stop()
-        listener = null
     }
 
     override fun RBuilder.render(ui: State): Any = when (ui) {

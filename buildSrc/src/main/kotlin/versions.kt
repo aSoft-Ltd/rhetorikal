@@ -4,7 +4,7 @@ object vers {
     val ktor = "1.5.3"
 
     object asoft {
-        val viewmodel = "0.0.90"
+        val viewmodel = "0.0.91"
         val test = "1.1.30"
         val rhetorikal = "0.0.10"
         val later = "0.0.60"
