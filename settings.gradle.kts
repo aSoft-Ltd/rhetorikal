@@ -39,3 +39,6 @@ project(":rhetorikal-instance-ktor").projectDir = File("rhetorikal-instance/rhet
 // instances
 include(":rhetorikal-instance-cli")
 project(":rhetorikal-instance-cli").projectDir = File("rhetorikal-instance/rhetorikal-instance-cli")
+
+include(":rhetorikal-instance-react")
+project(":rhetorikal-instance-react").projectDir = File("rhetorikal-instance/rhetorikal-instance-react")

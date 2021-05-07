@@ -1,1 +1,2 @@
-./testifier-instance/testifier-instance-cli/build/binaries/debug/bin/testifier-instance-cli
+./rhetorikal-instance/rhetorikal-instance-cli/build/binaries/debug/bin/rhetorikal-instance-cli
+exit

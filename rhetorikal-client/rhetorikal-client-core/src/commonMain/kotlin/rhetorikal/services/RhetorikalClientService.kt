@@ -1,4 +1,4 @@
-package rhetorikal
+package rhetorikal.services
 
 interface RhetorikalClientService {
     val rhetoricians: RhetoriciansClientService

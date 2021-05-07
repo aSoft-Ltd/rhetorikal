@@ -1,11 +1,13 @@
 package rhetorikal
 
+import duality.receiveTextBody
 import io.ktor.application.*
 import io.ktor.http.HttpStatusCode.Companion.OK
 import io.ktor.routing.*
 import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.json.Json
 import later.await
+import duality.respond
 
 fun Application.rhetorikals() = routing {
     val service = RhetorikalService()

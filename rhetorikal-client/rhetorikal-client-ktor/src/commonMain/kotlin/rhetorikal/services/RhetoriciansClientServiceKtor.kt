@@ -1,4 +1,4 @@
-package rhetorikal
+package rhetorikal.services
 
 import duality.Result
 import duality.parse
@@ -13,6 +13,9 @@ import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.json.Json
 import later.Later
 import later.later
+import rhetorikal.Rhetorician
+import rhetorikal.RhetoricianParams
+import rhetorikal.Routes
 
 class RhetoriciansClientServiceKtor(
     private val endpoint: String,

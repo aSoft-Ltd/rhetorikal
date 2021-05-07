@@ -4,7 +4,7 @@ import expect.toBe
 import later.await
 import test.asyncTest
 import rhetorikal.Rhetorician
-import rhetorikal.RhetoriciansClientServiceKtor
+import rhetorikal.services.RhetoriciansClientServiceKtor
 import rhetorikal.RhetoricianParams
 import kotlin.test.Test
 

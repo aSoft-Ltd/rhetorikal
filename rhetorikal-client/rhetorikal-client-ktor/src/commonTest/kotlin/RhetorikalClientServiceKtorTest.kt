@@ -2,7 +2,7 @@ import expect.expect
 import expect.toBeGreaterThan
 import later.await
 import test.asyncTest
-import rhetorikal.RhetorikalClientServiceKtor
+import rhetorikal.services.RhetorikalClientServiceKtor
 import rhetorikal.StatementParams
 import rhetorikal.RhetoricianParams
 import kotlin.test.Test

@@ -13,6 +13,7 @@ kotlin {
             dependencies {
                 api(project(":rhetorikal-server-core"))
                 api(project(":rhetorikal-rest"))
+                api(asoft("result-ktor", vers.asoft.duality))
                 api("io.ktor:ktor-server-core:${vers.ktor}")
             }
         }
@@ -26,6 +27,6 @@ kotlin {
 }
 
 aSoftOSSLibrary(
-    version = vers.asoft.testifier,
+    version = vers.asoft.rhetorikal,
     description = "A Ktor lib that manage testimonials"
 )

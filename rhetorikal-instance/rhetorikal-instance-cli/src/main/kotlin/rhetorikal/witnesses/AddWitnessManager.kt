@@ -14,7 +14,7 @@ fun addWitnessManager() {
     print("Enter the witness's workplace: ")
     val workplace = readLine()
     println("====".repeat(9))
-    println("Adding $name as a witness")
+    println("Adding $name as a witness, please wait . . .")
     val witnessInfo = RhetoricianParams(
         name = name!!,
         title = title!!,
@@ -22,5 +22,8 @@ fun addWitnessManager() {
     )
     witnessService.create(witnessInfo).wait()
     println("Added $name successfully")
+    println("====".repeat(9))
+    println("Press Enter to Continue . . .")
+    readLine()
     witnessManager()
 }

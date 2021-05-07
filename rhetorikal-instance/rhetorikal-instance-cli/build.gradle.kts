@@ -4,7 +4,7 @@ plugins {
 }
 
 application {
-    mainClass.set("testifier.MainKt")
+    mainClass.set("rhetorikal.MainKt")
 }
 
 applikation {

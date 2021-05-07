@@ -1,5 +1,6 @@
 package rhetorikal
 
+import duality.respond
 import io.ktor.application.*
 import io.ktor.features.*
 import io.ktor.http.*
@@ -16,7 +17,7 @@ data class Status(
 )
 
 fun main() {
-    embeddedServer(CIO, port = 8081) {
+    embeddedServer(CIO, port = 3000) {
         install(CORS) {
             header("*")
             allowNonSimpleContentTypes = true

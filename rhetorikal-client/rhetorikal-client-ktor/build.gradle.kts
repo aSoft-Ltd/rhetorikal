@@ -52,6 +52,6 @@ kotlin {
 }
 
 aSoftOSSLibrary(
-    version = vers.asoft.testifier,
+    version = vers.asoft.rhetorikal,
     description = "An multiplatform representation of a testimony library on the client side"
 )

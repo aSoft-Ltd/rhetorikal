@@ -22,6 +22,7 @@ fun witnessManager() {
             exitProcess(0)
         }
         else -> {
+            println("====".repeat(9))
             println("Invalid choice")
             witnessManager()
         }

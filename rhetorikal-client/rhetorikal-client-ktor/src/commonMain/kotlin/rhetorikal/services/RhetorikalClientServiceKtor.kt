@@ -1,4 +1,4 @@
-package rhetorikal
+package rhetorikal.services
 
 import io.ktor.client.*
 import kotlinx.coroutines.CoroutineScope
